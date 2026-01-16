@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FoodiesOnly</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .card-text {
+        font-size: 15px;
+        color: #5D4037;
+  }
+</style>
+  </head>
+  <body style="background-color:#FFF8E1;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#5D4037;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">🍕 FoodiesOnly 🍟</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="ms-3">
+        <button class="btn btn-outline-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4">
+
+        <div class="mb-3">
+          <label class="form-label">Phone</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              +91
+            </span>
+            <input type="tel" class="form-control" placeholder="Phone number">
+          </div>
+        </div>
+
+        <button class="btn btn-danger w-100 mb-3">Send One Time Password</button>
+
+        <div class="text-center my-2">or</div>
+
+        <button class="btn btn-outline-secondary w-100 mb-3">
+          <i class="bi bi-envelope me-2"></i> Continue with Email
+        </button>
+
+        <button class="btn btn-outline-secondary w-100 mb-3 d-flex align-items-center justify-content-center">
+          Continue with Google
+        </button>
+
+        <div class="text-center mt-3">
+          New to FoodiesOnly? <a href="#" class="text-danger fw-bold">Create account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title">Signup</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Create password">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" placeholder="Confirm password">
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner bg-dark">
+    <div class="carousel-item active" data-bs-interval="1800">
+      <img src="images\samosa.jpg" class="d-block w-100" style="height:400px; object-fit:contain;" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Deep fried samosas on rustic wooden plate</h5>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="1800">
+      <img src="images\pexels-vanmalidate-769289.jpg" class="d-block w-100" style="height:400px; object-fit:contain;" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pizza filled with tomatoes, salami and olives</h5>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="1800">
+      <img src="images\burger.jpg" class="d-block w-100" style="height:400px; object-fit:contain;" />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Juicy cheeseburger on rustic wooden board</h5>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section id="categories">
+
+    <div class="container my-5">
+      <div class="container">
+        <h2>Featured Products 🎀</h2>
+      </div>
+
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="images\pexels-bank-12318206.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Pani Puri ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;"
+                  >Add To Cart <i class="bi bi-cart-check"></i
+                >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="images\pexels-saveurssecretes-7625056.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Butter Chicken with Garlic Naan ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;"
+                  >Add To Cart <i class="bi bi-cart-check-fill"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="images\pexels-lum3n-44775-1410235.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Healthy Green Bowl ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="images\pexels-sydney-troxell-223521-718742.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Grilled Chicken Salad ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 my-5">
+            <div class="card">
+              <img
+                src="images\pexels-valeriya-842571.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Veggie Salad Bowl ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 my-5">
+            <div class="card">
+              <img
+                src="images\f.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Cheese Sub Sandwich ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 my-5">
+            <div class="card">
+              <img
+                src="images\pizza1.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Wood-Fired Pizza ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 my-5">
+            <div class="card">
+              <img
+                src="images\pexels-saveurssecretes-10078268.jpg"
+                class="card-img-top"
+                style = "height:300px; object-fit:cover;"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <p class="card-text text-center">Chicken Biryani ♡</p>
+                <a href="#" class="btn text-white" style="background-color:#5D4037;">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <section class="bg-dark text-white text-center d-flex align-items-center justify-content-center" 
+         style="background: url(images\pexels-enginakyurt-1435895.jpg) center/cover no-repeat; height: 50vh; object-fit:contain; ">
+  <div class="p-5 rounded" style="background: rgba(0,0,0,0.5);">
+    <h1 class="display-4 fw-bold">Get Your Customized Food</h1>
+    <p class="lead mb-4">Fresh. Fast. Made just the way you like it.</p>
+    <a href="#menu" class="btn btn-danger btn-lg px-4">Order Now</a>
+  </div>
+</section>
+
+    <section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Contact Us 📩 </h2>
+    <p>Email: support@FoodiesOnly.com | Phone: +91 9935224461</p>
+    <a href="mailto:support@foodstore.com" class="btn btn-dark">Send Email</a>
+  </div>
+</section>
+
+    <footer class="bg-dark text-white text-center py-3">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-white">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-white">Features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-white">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-white">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-white">About</a>
+          </li>
+        </ul>
+  <p class="mb-0">© 2025 FoodiesOnly | All Rights Reserved</p>
+</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
